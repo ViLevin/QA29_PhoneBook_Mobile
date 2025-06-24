@@ -21,9 +21,8 @@ public class AuthentificationScreen extends BaseScreen {
     //    @FindBy(xpath = "//*[text()='LOGIN']")
     @FindBy(xpath = "//*[@text='LOGIN']")
     MobileElement loginBtn;
-    @FindBy(xpath = "com.sheygam.contactapp:id/regBtn")
+    @FindBy(id = "com.sheygam.contactapp:id/regBtn")
     MobileElement regBtn;
-
 
 
     public AuthentificationScreen fillEmail(String email) {
@@ -63,9 +62,16 @@ public class AuthentificationScreen extends BaseScreen {
         return this;
     }
 
-//    public ContactListScreen submitRegistration() {
-//        regBtn.click();
-//        return new ContactListScreen(driver);
-//    }
+    public ContactListScreen submitRegistration() {
+        regBtn.click();
+        return new ContactListScreen(driver);
+    }
+
+    public AuthentificationScreen submitRegistUnsuccesful() {
+        regBtn.click();
+        return this;
+    }
+
+
 }
 //test12@gmail.com  vilevinQa!1234
